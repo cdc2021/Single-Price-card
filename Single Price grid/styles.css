@@ -1,0 +1,170 @@
+/*GLOBAL STYLES*/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+body {
+  font-family: "Karla", sans-serif;
+  font-size: 1.4rem;
+  height: 100vh;
+  width: 100%;
+  margin: auto;
+  padding: 5rem 5rem;
+  background-color: hsla(180, 66%, 92%, 0.473);
+  position: relative;
+}
+
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+h1 {
+  color: hsl(179, 62%, 43%);
+  font-size: 3.4rem;
+  padding-top: 1rem;
+}
+
+p,
+li {
+  color: hsl(204, 43%, 93%);
+  font-size: 1.6rem;
+}
+
+.community p {
+  color: hsl(218, 22%, 67%);
+}
+
+.community h2 {
+  font-size: 1.8rem;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+  color: hsl(71, 73%, 54%);
+}
+
+h2 {
+  color: white;
+  font-size: 2.4rem;
+}
+
+.price p {
+  color: white;
+  font-size: 3rem;
+  padding-top: 2rem;
+}
+
+span {
+  color: hsla(210, 11%, 93%, 0.651);
+  font-size: 1.4rem;
+}
+
+.subscription p {
+  padding-bottom: 1rem;
+}
+
+button {
+  padding: 2rem 8rem 2rem 8rem;
+  border-radius: 1rem;
+  background-color: hsl(71, 73%, 54%);
+  border: none;
+  box-shadow: 1px 1px 0px 1px hsla(203, 44%, 93%, 0.288);
+  margin-top: 3%;
+  color: white;
+  font-size: 1.6rem;
+  font-weight: bold;
+  cursor: pointer;
+  display: block;
+  text-decoration: none;
+  width: 90%;
+}
+
+ul {
+  list-style: none;
+  padding-top: 1rem;
+  line-height: 1.5;
+}
+
+.community,
+.subscription,
+.why-us {
+  padding-left: 3rem;
+  padding-top: 3rem;
+  padding-right: 3rem;
+}
+
+.community {
+  background-color: white;
+  border-radius: 1rem 1rem 0 0;
+}
+
+.subscription {
+  background-color: hsl(179, 62%, 43%);
+  border-radius: 0 0 0 1rem;
+}
+
+.why-us {
+  background-color: hsla(179, 62%, 43%, 0.781);
+  border-radius: 0 0 1rem 0;
+  padding: 2rem;
+}
+
+/* BOX GRID */
+
+.wrapper {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  grid-template-areas:
+    "community community"
+    "subscription why-us";
+  width: 60%;
+  box-shadow: 0rem 1rem 1rem hsl(218, 22%, 67%);
+  border-radius: 0 0 1rem 1rem;
+}
+
+.community {
+  grid-area: community;
+}
+
+.subscription {
+  grid-area: subscription;
+}
+
+.why-us {
+  grid-area: why-us;
+}
+
+@media screen and (max-width: 1200px) {
+  body {
+    height: 100%;
+  }
+
+  .wrapper {
+    display: block;
+    grid-template: repeat(3, 1fr) / 1fr;
+    grid-template-areas: "join" "subscription" "why-us";
+    width: 500px;
+    height: 100%;
+    margin: 0px 10px;
+  }
+
+  .community,
+  .subscription,
+  .why-us {
+    padding-bottom: 3rem;
+  }
+  .subscription {
+    border-radius: 0 0 0 0rem;
+  }
+
+  .why-us {
+    border-radius: 0 0 1rem 1rem;
+    padding: 2rem;
+  }
+}
